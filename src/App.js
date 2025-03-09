@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
-import "./App.css"; 
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +36,10 @@ class App extends Component {
         (sum, item) => sum + item.price * item.quantity,
         0
       );
-      this.setState({ totalPrice });
+
+      if (prevState.totalPrice !== totalPrice) {
+        this.setState({ totalPrice });
+      }
     }
   }
 
@@ -61,10 +64,9 @@ class App extends Component {
         .map((item) =>
           item.id === id ? { ...item, quantity: item.quantity - 1 } : item
         )
-        .filter((item) => item.quantity > 0), 
+        .filter((item) => item.quantity > 0),
     }));
   };
-  
 
   clearCart = () => {
     this.setState({ cart: [] });
