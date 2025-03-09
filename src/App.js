@@ -20,11 +20,11 @@ class App extends Component {
       this.setState({
         products: [
           { id: 1, name: "Laptop", price: 45000, image: "/images/laptop.jpg" },
-          { id: 2, name: "Smartphone", price: 25000, image: "/images/laptop.jpg" },
-          { id: 3, name: "Headphones", price: 5000, image: "/images/laptop.jpg" },
-          { id: 4, name: "Computer", price: 15000, image: "/images/laptop.jpg" },
-          { id: 5, name: "Aircon", price: 21000, image: "/images/laptop.jpg" },
-          { id: 6, name: "Refrigerator", price: 16000, image: "/images/laptop.jpg" },
+          { id: 2, name: "Smartphone", price: 25000, image: "/images/smartphone.jpg" },
+          { id: 3, name: "Headphones", price: 5000, image: "/images/headphone.jpg" },
+          { id: 4, name: "Computer", price: 15000, image: "/images/computer.jpg" },
+          { id: 5, name: "Aircon", price: 21000, image: "/images/aircon.jpg" },
+          { id: 6, name: "Refrigerator", price: 16000, image: "/images/refrigerator.jfif" },
         ],
       });
     }, 1000);
